@@ -4,26 +4,26 @@ pipeline {
     stages {
         stage('Install Dependencies') {
             steps {
-                sh 'npm install'
+                bat  'npm install'
             }
         }
 
         stage('Run Tests') {
             steps {
-                sh 'npm test'
+                bat  'npm test'
             }
         }
 
         stage('Build') {
             steps {
-                sh 'npm run build --prod'
+                bat 'npm run build --prod'
             }
         }
 
         stage('Deploy to Docker') {
             steps {
-                sh 'docker build -t frontend-image .'
-                sh 'docker run -d -p 4200:80 --name frontend-container frontend-image'
+                bat 'docker build -t frontend-image .'
+                bat 'docker run -d -p 4200:80 --name frontend-container frontend-image'
             }
         }
     }
