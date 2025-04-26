@@ -1,0 +1,4 @@
+no tiene test uniarios
+se genero pipeline en Jenkins falta corregir errores
+falta genera la imagen y el contendor en dockerhub
+back es la carpeta back node js, el front es esta y esta en angular 
